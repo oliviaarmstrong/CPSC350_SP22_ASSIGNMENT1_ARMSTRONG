@@ -9,4 +9,6 @@ public:
   ~Model();
   string translateSingleCharacter(char singleInput);
   string translateDoubleCharacter(char doubleInput);
+
+  int returnIndex(char tutCharacter);
 };

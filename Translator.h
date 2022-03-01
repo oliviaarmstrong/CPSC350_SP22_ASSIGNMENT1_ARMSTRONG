@@ -8,8 +8,9 @@ class Translator {
 public:
   Translator();
   ~Translator();
-  string translateEnglishWord(string englishWord);
-  string translateEnglishSentence(string englishSentence);
+  string translateWord(string word, string language);
+  string translateSentence(string sentence, string language);
+
 private:
   Model m;
 };

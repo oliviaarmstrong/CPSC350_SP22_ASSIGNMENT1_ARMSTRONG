@@ -1,8 +1,8 @@
 //implemenation file, .cpp
 
-/* processFile : Takes a string representing the input file containing text in English
+/* processFile : Takes a string representing the input file
 as well as a string representing the output file which will contain the text
-translated in Tutnese */
+translated in Tutnese or English */
 
 #include "FileProcessor.h"
 
@@ -10,7 +10,7 @@ FileProcessor::FileProcessor() {}
 
 FileProcessor::~FileProcessor() {}
 
-void FileProcessor::processFile(string english, string tutnese) {
+void FileProcessor::processFile(string english, string tutnese, string language) {
   ifstream inFS;
   ofstream ofFS;
   string line;
@@ -18,7 +18,7 @@ void FileProcessor::processFile(string english, string tutnese) {
   inFS.open(english);
   ofFS.open(tutnese);
   while(getline(inFS,line)) {
-    ofFS << t.translateEnglishSentence(line) << endl;
+    ofFS << t.translateSentence(line, language) << endl;
   }
   inFS.close();
   ofFS.close();
