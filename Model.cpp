@@ -1,14 +1,9 @@
 //implemenation file, .cpp
 
 /* translateSingleCharacter : single character as input, returns string translated
-in Tutnese
-
-translateDoubleCharacter : single character as input that appears twice in
-a row, returns string translated in Tutnese
-
-returnIndex : First character of Tutnese "block" of characters as input, returns integer that represents how much is needed
-to index in order to get to next "block" of Tutnese */
-
+in Tutnese */
+/* translateDoubleCharacter : single character as input that appears twice in
+a row, returns string translated in Tutnese */
 
 #include "Model.h"
 #include <cctype>
@@ -16,65 +11,6 @@ to index in order to get to next "block" of Tutnese */
 Model::Model() {}
 
 Model::~Model() {}
-
-int Model::returnIndex(char tutCharacter) {
-  switch(tutCharacter) {
-    case 'B':
-    case 'b':
-    case 'D':
-    case 'd':
-    case 'F':
-    case 'f':
-    case 'G':
-    case 'g':
-    case 'J':
-    case 'j':
-    case 'L':
-    case 'l':
-    case 'M':
-    case 'm':
-    case 'N':
-    case 'n':
-    case 'P':
-    case 'p':
-    case 'R':
-    case 'r':
-    case 'S':
-    case 's':
-    case 'T':
-    case 't':
-    case 'V':
-    case 'v':
-    case 'Y':
-    case 'y':
-    case 'Z':
-    case 'z':
-    return 2;
-    break;
-    case 'C':
-    case 'c':
-    case 'H':
-    case 'h':
-    case 'K':
-    case 'k':
-    case 'W':
-    case 'w':
-    return 3;
-    break;
-    case 'Q':
-    case 'q':
-    return 4;
-    break;
-    case 'X':
-    case 'x':
-    return 1;
-    break;
-    default:
-      return 0;
-      break;
-
-  }
-}
 
 string Model::translateSingleCharacter(char singleInput) {
   switch (singleInput) {

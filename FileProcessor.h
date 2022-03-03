@@ -9,7 +9,7 @@ class FileProcessor{
 public:
   FileProcessor();
   ~FileProcessor();
-  void processFile(string english, string tutnese, string language);
+  void processFile(string english, string tutnese);
 private:
   Translator t;
 };
